@@ -12,7 +12,7 @@ export default function ShortenForm() {
       await sendLog('📤 User submitted URL to shorten');
 
       const response = await axios.post(
-  'http://localhost:4000/shorten', // ✅ use backend proxy
+  'http://localhost:4000/shorten', //use backend proxy
   { url },
   {
     headers: {
@@ -26,12 +26,12 @@ export default function ShortenForm() {
 
       if (shortened) {
         setShortUrl(shortened);
-        await sendLog(`✅ Received short URL: ${shortened}`);
+        await sendLog(`Received short URL: ${shortened}`);
       } else {
-        throw new Error('❌ No result_url returned from API');
+        throw new Error(' No result_url returned from API');
       }
     } catch (error) {
-      await sendLog(`❌ Error shortening URL: ${error.message}`);
+      await sendLog(` Error shortening URL: ${error.message}`);
     }
   };
 

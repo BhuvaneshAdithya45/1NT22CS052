@@ -17,7 +17,7 @@ app.post('/log', (req, res) => {
   res.status(200).send('OK');
 });
 
-// ✅ Add proxy endpoint for shortening
+
 app.post('/shorten', async (req, res) => {
   try {
     const { url } = req.body;
@@ -41,5 +41,5 @@ app.post('/shorten', async (req, res) => {
 
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
-  console.log(`🔉 Logging Middleware listening on port ${PORT}`);
+  console.log(` Logging Middleware listening on port ${PORT}`);
 });

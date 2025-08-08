@@ -10,7 +10,7 @@ function RouteLogger() {
   const location = useLocation();
 
   useEffect(() => {
-    sendLog(`🧭 Navigated to ${location.pathname}`);
+    sendLog(` Navigated to ${location.pathname}`);
   }, [location]);
 
   return null;

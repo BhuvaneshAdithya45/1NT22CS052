@@ -7,9 +7,9 @@ const sendLog = async (message, level = 'info') => {
       level,
       timestamp: new Date().toISOString(),
     });
-    console.log(`✅ [${level.toUpperCase()}] Log sent:`, message);
+    console.log(` [${level.toUpperCase()}] Log sent:`, message);
   } catch (error) {
-    console.error('❌ Failed to send log:', error.message);
+    console.error(' Failed to send log:', error.message);
   }
 };
 
